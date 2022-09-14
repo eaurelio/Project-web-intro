@@ -96,10 +96,11 @@ const pratos = [
     principal: false,
     tamanho: ['Único'],
     sabor: [
-      'Cannoli',
-      'Cioccolato',
-      'Mil Folhas',
-      'Pudim'
+      'Tinto',
+      'Branco',
+      'Rosé',
+      'Espumante',
+      'Licoroso'
     ]
   }
 ]
@@ -174,5 +175,7 @@ const retornaObjetoNome = (array, chave) => {
   return obj
 }
 
-// retornaObjetoNome(acompanhamento, 'Saladas')
-console.log(retornaObjetoNome(acompanhamento, 'Pizzas'))
+// Imprime os arrays
+// console.log(principal); console.log(acompanhamento);
+
+console.log(retornaObjetoNome(acompanhamento, 'Vinhos'))
