@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://kit.fontawesome.com/04cafd793b.js" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js" defer></script>
 </head>
 <body>
   
@@ -23,26 +24,37 @@
       <span> <a href="">Fidelidade</a> </span>
       <span> <a href="">Contato</a> </span>
     </nav>
-
   </header>
 
   <main id="main">
+    <section id="buscaMenu">
+      <i class="fa-sharp fa-solid fa-magnifying-glass" style="font-size: 1.5em;" id="lupa" onclick=""></i>
+      <input type="text"  style="height: 25px;" id="search" placeholder="Insira o nome do prato">
+      <button id="searchItem" style="margin-left: 5px; width: 80px;">Pesquisar</button>
+    </section>
 
-    <article id="buscaMenu">
-      <input type="text"  name="" id="search" placeholder="Insira o nome do prato">
-      <i class="fa-sharp fa-solid fa-magnifying-glass" id="lupa" onclick=""></i>
-    </article>
-
-    <article id="exibeMenu">
-
-    </article>
+    <section id="exibeMenu">
+      <!--  -->
+      <!-- <article class="card">
+        <div>
+          <img src="https://picsum.photos/150" alt="">
+        </div>
+        <div class="description">
+          <div class="desc_title">
+            <h1>Nome</h1>
+          </div>
+          <div class="desc_content">
+            <p>descrição</p>
+          </div>
+        </div>
+      </article> -->
+      <!--  -->
+    </section>
   </main>
 
   <footer id="footer">
     <p>Powered By: Edson.exe - Github: https://github.com/eaurelio </p>
 
   </footer>
-
-  <script src="assets/js/script.js"></script>
 </body>
 </html>

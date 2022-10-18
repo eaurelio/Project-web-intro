@@ -1,121 +1,140 @@
-const principal = []
-const acompanhamento = []
+const salgada = []
+const doce = []
 
-const pratos = [
-{
+let pratos = [
+  {
     id: 1,
-    nome: 'Pizzas',
-    principal: true,
-    tamanho: ['P', 'M', 'G', 'F'],
-    sabor: [
-      'A moda da casa',
-      'Bacon',
-      'Calabresa',
-      'Franco c/ catupiry',
-      'Italiana',
-      'Portuquesa',
-      'Marguerita'
-    ],
-    doce: false
+      nome: 'À moda da casa',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'moda.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'calabresa', 'cebola', 'lombo canadense', 'tomate', 'milho', 'bacon', 'catupiry'
+      ]
   },
-  
   {
     id: 2,
-    nome: 'Lasanhas',
-    principal: true,
-    tamanho: ['P', 'M', 'G'],
-    sabor: [
-      'Bolonhesa',
-      'Quatro quejos',
-      'Franco c/ catupiry',
-      'Carne'
-    ],
-    doce: false
+      nome: 'Bacon',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'bacon.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'bacon', 'milho'
+      ]
   },
-  
   {
     id: 3,
-    nome: 'Spaghetti',
-    principal: true,
-    tamanho: ['Único'],
-    sabor: [
-      'Fettuccine Allegro',
-      'Massa Alfredo',
-      'Massa ao molho pomodoro',
-      'Massa Bolognesa Clássico',
-      'Massa Carmonara',
-      'Penne Caprese',
-      'Massa Italiaa com filé de frango',
-      'Al Mare',
-    ],
-    doce: false
+      nome: 'Calabresa',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'calabresa.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'calabresa', 'cebola'
+      ]
   },
-  
   {
     id: 4,
-    nome: 'Focaccia',
-    principal: true,
-    tamanho: ['Único'],
-    sabor: [
-      'Focaccia Calabresa',
-      'Focaccia Champgnon',
-      'Focaccia Marguerita',
-      'Focaccia Mussarela',
-      'Focaccia Queijos'
-    ]
+      nome: 'Frango c/ catupiry',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'frangocatupiry.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'frango', 'catupiry'
+      ]
   },
-  
   {
     id: 5,
-    nome: 'Saladas',
-    principal: false,
-    tamanho: ['Único'],
-    sabor: [
-      'Bambini',
-      'Tradizionale',
-      'Caesar',
-    ]
+      nome: 'Italiana',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'italiana.jpg',
+      ingredientes: [
+        'Mussarela', 'orégano', 'calabresa', 'bacon', 'cebola', 'azeitona', 'palmito', 'catupiry'
+      ]
   },
-  
   {
     id: 6,
-    nome: 'Sobremesas',
-    principal: false,
-    tamanho: ['Único'],
-    sabor: [
-      'Cannoli',
-      'Cioccolato',
-      'Mil Folhas',
-      'Pudim'
-    ]
+      nome: 'Portuguesa',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'portuguesa.jpg',
+      ingredientes: [
+        'Mussarela', 'orégano', 'presunto', 'calabresa', 'cebola', 'pimentão'
+      ]
   },
-  
   {
     id: 7,
-    nome: 'Vinhos',
-    principal: false,
-    tamanho: ['Único'],
-    sabor: [
-      'Tinto',
-      'Branco',
-      'Rosé',
-      'Espumante',
-      'Licoroso'
-    ]
+      nome: 'Marguerita',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'marguerita.jpg',
+      ingredientes: [
+        'Mussarela', 'orégano', 'calabresa', 'tomate', 'cebola'
+      ]
+  },
+  {
+    id: 8,
+      nome: 'Atum ao catupiry',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'atum.jpg',
+      ingredientes: [
+        'atum', 'mussarela', 'orégano', 'cebola', 'catupiry', 'azeitona'
+      ]
+  },
+  {
+    id: 9,
+      nome: 'Baiana',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'baiana.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'calabresa', 'tomate', 'pimenta calabresa'
+      ]
+  },
+  {
+    id: 10,
+      nome: 'Frango da roça',
+      salgada: true,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'frango.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'frango', 'milho', 'catupiry', 'batata palha'
+      ]
+  }, 
+  {
+    id: 11,
+      nome: 'Banana',
+      salgada: false,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'banana.jpg',
+      ingredientes: [
+        'mussarela', 'orégano', 'banana', 'canela'
+      ]
+  },
+  {
+    id: 12,
+      nome: 'Chocolate',
+      salgada: false,
+      tamanho: ['P', 'M', 'G', 'F'],
+      img: 'chocolate.jpg',
+      ingredientes: [
+        'mussarela', 'chocolate granulado', 'leite condensado', 'cereja'
+      ]
   }
 ]
 
 pratos.map(function (el, i, array) {
-  let sabores = el.sabor.toString()
-  el.sabor = sabores
+  let ingredientes = el.ingredientes.toString()
+  el.ingredientes = ingredientes
 })
 
 
-pratos.map(function (el, i, array) {
-  if(el.principal === true) {
-    principal.push(el)
+salgada.map(function (el, i, array) {
+  if(el.salgada === true) {
+    salgada.push(el)
   } else {
-    acompanhamento.push(el)
+    doce.push(el)
   }
 })
 
@@ -178,4 +197,60 @@ const retornaObjetoNome = (array, chave) => {
 // Imprime os arrays
 // console.log(principal); console.log(acompanhamento);
 
-console.log(retornaObjetoNome(acompanhamento, 'Vinhos'))
+// console.log(retornaObjetoNome(acompanhamento, 'Vinhos'))
+const busca = document.getElementById('search')
+const menu = document.getElementById('exibeMenu')
+const searchItem = document.getElementById('searchItem')
+
+// busca.addEventListener('keyup', function() {
+//   console.log(busca.value)
+// })
+
+function createItem (prato) {
+  prato.map(function (el, i, ar) {
+    // Criando o card
+    let box = document.createElement('article')
+    box.classList.add('card')
+    // img
+    let img = document.createElement('img')
+    img.setAttribute('src', `./assets/img/pizzas/${el.img}`)
+    // console.log(`./assets/img/pizzas/${el.img}`)
+    box.appendChild(img)
+    // div description
+    let desc = document.createElement('div')
+    desc.classList.add('description')
+    let h3 = document.createElement('h3')
+    h3.innerHTML = el.nome
+    desc.appendChild(h3)
+    // parágrafo ingredientes
+    box.appendChild(desc)
+    let ingredientes = document.createElement('p')
+    ingredientes.innerHTML = `<span style="font-weight: bold; color:red">Ingredientes:</span> ${el.ingredientes.replaceAll(',', ', ')}`
+    desc.appendChild(ingredientes)
+    // Tamanhos
+    let tamanhos = document.createElement('div')
+    tamanhos.className = 'tamanhos'
+    tamanhos.innerHTML = `Tamanhos: <span style="font-weight: bold; color:green">${el.tamanho.toString().replaceAll(',', ', ')}</span>`
+    desc.appendChild(tamanhos)
+
+    menu.appendChild(box)
+  })  
+}
+
+searchItem.addEventListener('click', function() {
+  // console.log(busca.value)
+  let arr = pratos.filter((prato) => prato.nome.toLowerCase().includes(busca.value.toLowerCase()))
+  console.log(arr)
+  if (busca.value === '') {
+    window.alert('É necessário informar um sabor à pesquisa')
+    menu.innerHTML = ''
+    createItem(pratos)
+  } else {
+    menu.innerHTML = ''
+  createItem(arr)
+  }
+})
+
+
+
+window.onload = createItem(pratos)
