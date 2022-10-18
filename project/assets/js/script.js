@@ -150,47 +150,6 @@ salgada.map(function (el, i, array) {
   }
 })
 
-// console.log(principal)
-// console.log(acompanhamento)
-
-// *****************************************************************
-// Semana 5
-// for (i in principal) {
-//   console.log(principal[i])
-// }
-
-
-// *****************************************************************
-// Semana 6-1
-
-// const objetoTeste ={
-//   id: 1,
-//   nome: 'Pizzas',
-//   principal: true,
-//   tamanho: ['P', 'M', 'G', 'F'],
-//   sabor: [
-//     'A moda da casa',
-//     'Bacon',
-//     'Calabresa',
-//     'Franco c/ catupiry',
-//     'Italiana',
-//     'Portuquesa',
-//     'Marguerita'
-//   ],
-//   doce: false
-// }
-// const retornaObjeto = x => {
-//   let string
-//   for (let i in x) {
-//     string += x[i]
-//   }
-//   return string
-// }
-
-// console.log(retornaObjeto(objetoTeste))
-
-// *****************************************************************
-// Semana 6-2
 
 const retornaObjetoNome = (array, chave) => {
   let obj
@@ -206,24 +165,18 @@ const retornaObjetoNome = (array, chave) => {
   return obj
 }
 
-// Imprime os arrays
-// console.log(principal); console.log(acompanhamento);
-
-// console.log(retornaObjetoNome(acompanhamento, 'Vinhos'))
 const busca = document.getElementById('search')
 const menu = document.getElementById('exibeMenu')
 const searchItem = document.getElementById('searchItem')
 
-// busca.addEventListener('keyup', function() {
-//   console.log(busca.value)
-// })
 
 function createItem (prato) {
   for (let el of prato) {
     console.log(`Sabor: ${el.nome}
-    Ingredientes: ${el.ingredientes}
-    Tamanhos disponíveis: ${el.tamanho}
-    Tempo de preparo: ${el.tempoMedioPreparo}
+    Ingredientes: ${el.ingredientes.replaceAll(',', ', ')}
+    Tamanhos disponíveis: ${el.tamanho.toString().replaceAll(',', ', ')}
+    Tempo médio de preparo: ${el.tempoMedioPreparo} minutos
+    Salgada: ${el.salgada}
     `)
   }
   prato.map(function (el) {
@@ -251,6 +204,11 @@ function createItem (prato) {
     tamanhos.className = 'tamanhos'
     tamanhos.innerHTML = `Tamanhos: <span style="font-weight: bold; color:green">${el.tamanho.toString().replaceAll(',', ', ')}</span>`
     desc.appendChild(tamanhos)
+    // Tempo de preparo
+    let tempo = document.createElement('div')
+    tempo.className = 'tamanhos'
+    tempo.innerHTML = `Tempo médio de preparo: ${el.tempoMedioPreparo} minutos`
+    desc.appendChild(tempo)
 
     menu.appendChild(box)
   })  
@@ -258,7 +216,6 @@ function createItem (prato) {
 
 searchItem.addEventListener('click', function() {
   let arr = pratos.filter((prato) => prato.nome.toLowerCase().includes(busca.value.toLowerCase()))
-  console.log(arr)
   if (busca.value === '') {
     window.alert('É necessário informar um sabor à pesquisa')
     menu.innerHTML = ''
@@ -269,6 +226,5 @@ searchItem.addEventListener('click', function() {
   }
 })
 
-
-
+// Carregando o cardápio na inicialização
 window.onload = createItem(pratos)
