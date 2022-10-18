@@ -1,7 +1,7 @@
 const salgada = []
 const doce = []
 
-let pratos = [
+const pratos = [
   {
     id: 1,
       nome: 'À moda da casa',
@@ -10,7 +10,8 @@ let pratos = [
       img: 'moda.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'cebola', 'lombo canadense', 'tomate', 'milho', 'bacon', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '50'
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ let pratos = [
       img: 'bacon.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'bacon', 'milho'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ let pratos = [
       img: 'calabresa.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'cebola'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ let pratos = [
       img: 'frangocatupiry.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'frango', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 5,
@@ -50,7 +54,8 @@ let pratos = [
       img: 'italiana.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'calabresa', 'bacon', 'cebola', 'azeitona', 'palmito', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '48'
   },
   {
     id: 6,
@@ -60,7 +65,8 @@ let pratos = [
       img: 'portuguesa.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'presunto', 'calabresa', 'cebola', 'pimentão'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 7,
@@ -70,7 +76,8 @@ let pratos = [
       img: 'marguerita.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'calabresa', 'tomate', 'cebola'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 8,
@@ -80,7 +87,8 @@ let pratos = [
       img: 'atum.jpg',
       ingredientes: [
         'atum', 'mussarela', 'orégano', 'cebola', 'catupiry', 'azeitona'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 9,
@@ -90,7 +98,8 @@ let pratos = [
       img: 'baiana.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'tomate', 'pimenta calabresa'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 10,
@@ -100,7 +109,8 @@ let pratos = [
       img: 'frango.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'frango', 'milho', 'catupiry', 'batata palha'
-      ]
+      ],
+      tempoMedioPreparo: '40'
   }, 
   {
     id: 11,
@@ -110,7 +120,8 @@ let pratos = [
       img: 'banana.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'banana', 'canela'
-      ]
+      ],
+      tempoMedioPreparo: '25'
   },
   {
     id: 12,
@@ -120,7 +131,8 @@ let pratos = [
       img: 'chocolate.jpg',
       ingredientes: [
         'mussarela', 'chocolate granulado', 'leite condensado', 'cereja'
-      ]
+      ],
+      tempoMedioPreparo: '25'
   }
 ]
 
@@ -207,7 +219,14 @@ const searchItem = document.getElementById('searchItem')
 // })
 
 function createItem (prato) {
-  prato.map(function (el, i, ar) {
+  for (let el of prato) {
+    console.log(`Sabor: ${el.nome}
+    Ingredientes: ${el.ingredientes}
+    Tamanhos disponíveis: ${el.tamanho}
+    Tempo de preparo: ${el.tempoMedioPreparo}
+    `)
+  }
+  prato.map(function (el) {
     // Criando o card
     let box = document.createElement('article')
     box.classList.add('card')
@@ -238,7 +257,6 @@ function createItem (prato) {
 }
 
 searchItem.addEventListener('click', function() {
-  // console.log(busca.value)
   let arr = pratos.filter((prato) => prato.nome.toLowerCase().includes(busca.value.toLowerCase()))
   console.log(arr)
   if (busca.value === '') {
