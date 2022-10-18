@@ -7,7 +7,8 @@ const pratos = [
       img: 'moda.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'cebola', 'lombo canadense', 'tomate', 'milho', 'bacon', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '50'
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const pratos = [
       img: 'bacon.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'bacon', 'milho'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 3,
@@ -27,17 +29,19 @@ const pratos = [
       img: 'calabresa.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'cebola'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 4,
-      nome: 'Franco c/ catupiry',
+      nome: 'Frango c/ catupiry',
       salgada: true,
       tamanho: ['P', 'M', 'G', 'F'],
       img: 'frangocatupiry.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'frango', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ const pratos = [
       img: 'italiana.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'calabresa', 'bacon', 'cebola', 'azeitona', 'palmito', 'catupiry'
-      ]
+      ],
+      tempoMedioPreparo: '48'
   },
   {
     id: 6,
@@ -57,7 +62,8 @@ const pratos = [
       img: 'portuguesa.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'presunto', 'calabresa', 'cebola', 'pimentão'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 7,
@@ -67,7 +73,8 @@ const pratos = [
       img: 'marguerita.jpg',
       ingredientes: [
         'Mussarela', 'orégano', 'calabresa', 'tomate', 'cebola'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 8,
@@ -77,7 +84,8 @@ const pratos = [
       img: 'atum.jpg',
       ingredientes: [
         'atum', 'mussarela', 'orégano', 'cebola', 'catupiry', 'azeitona'
-      ]
+      ],
+      tempoMedioPreparo: '35'
   },
   {
     id: 9,
@@ -87,7 +95,8 @@ const pratos = [
       img: 'baiana.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'calabresa', 'tomate', 'pimenta calabresa'
-      ]
+      ],
+      tempoMedioPreparo: '30'
   },
   {
     id: 10,
@@ -97,7 +106,8 @@ const pratos = [
       img: 'frango.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'frango', 'milho', 'catupiry', 'batata palha'
-      ]
+      ],
+      tempoMedioPreparo: '40'
   }, 
   {
     id: 11,
@@ -107,7 +117,8 @@ const pratos = [
       img: 'banana.jpg',
       ingredientes: [
         'mussarela', 'orégano', 'banana', 'canela'
-      ]
+      ],
+      tempoMedioPreparo: '25'
   },
   {
     id: 12,
@@ -117,6 +128,7 @@ const pratos = [
       img: 'chocolate.jpg',
       ingredientes: [
         'mussarela', 'chocolate granulado', 'leite condensado', 'cereja'
-      ]
+      ],
+      tempoMedioPreparo: '25'
   }
 ]
