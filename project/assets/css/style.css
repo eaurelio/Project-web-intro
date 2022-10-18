@@ -57,15 +57,12 @@
 }
 
 .card {
-  /* border: 1px solid gray; */
   background:rgba(255,255,255,0.5);
   margin: auto;
   width: 500px;
   min-height: 160px;
   padding: 10px;
   display: flex;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
   justify-content: flex-start;
 }
 
@@ -75,14 +72,9 @@ img {
 }
 
 .description {
-  /* width: 60%; */
   text-align: center;
   padding: 10px;
-  /* display: block; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-around; */
-  /* margin: 0 auto; */
+
 }
 
 h3 {
